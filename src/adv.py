@@ -47,8 +47,20 @@ print(player)
 # * Prints the current room name
 # * Prints the current description (the textwrap module might be useful here).
 # * Waits for user input and decides what to do.
-#
+
+while True:
+    print(player.room)
+    print(player.room.description)
+    cmd = input("\n-> What do you want to do. Enter your command: ")
+
 # If the user enters a cardinal direction, attempt to move to the room there.
 # Print an error message if the movement isn't allowed.
-#
+
+    if cmd == 'q':
+        break
+    elif cmd == [direction for direction in ["e", "w", "n", "s"]]:
+        player.move(direction)
+    else:
+        print("Error. Please type a valid command from these: e, w, n,s")
+
 # If the user enters "q", quit the game.
