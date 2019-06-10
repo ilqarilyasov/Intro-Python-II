@@ -9,3 +9,6 @@ class Player:
 
     def __repr__(self):
         return f"Player is in {self.room}"
+
+    def move(self, direction):
+        print (f"{self.name} is in {direction}")
